@@ -4,6 +4,7 @@ A blender addon used for removing empty vertex groups and bones with no correspo
 # Install
 * Download from [github release](https://github.com/aoirusann/BlenderAddon_RemoveUnuseVertexGroupsAndBones/tags)
 * Then just install the `.zip` file in the same way as other blender addons
+* NOTE: You need to enable `Setting - Interface - Display - Develop Extras` to use this plugin. (thanks for @minitiv)
 
 # Usage
 
