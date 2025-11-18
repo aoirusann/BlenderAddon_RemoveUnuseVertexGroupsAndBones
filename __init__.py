@@ -3,6 +3,22 @@
 import bpy
 import copy
 
+class NoMeshDialog(bpy.types.Operator):
+    """Dialog to inform user about missing mesh selection"""
+    bl_idname = "object.no_mesh_dialog"
+    bl_label = "No Mesh Selected"
+    
+    def execute(self, context):
+        return {'FINISHED'}
+    
+    def invoke(self, context, event):
+        return context.window_manager.invoke_props_dialog(self)
+    
+    def draw(self, context):
+        layout = self.layout
+        layout.label(text="Please select at least one mesh object")
+        layout.label(text="along with the armature object.")
+
 # 1. Select some mesh objects whose vertex groups will be checked.
 # 2. F3 - Remove Unused VeretxGroups
 # 3. The vertex groups with empty weights on the mesh objects should be removed.
@@ -110,6 +126,11 @@ class RemoveUnusedBones(bpy.types.Operator):
         # Debug output
         self.report({"INFO"}, "Armature: " + obj_armature.name)
         self.report({"INFO"}, "Meshs: " + ",".join([obj_mesh.name for obj_mesh in objs_mesh]))
+        
+        # Check if there are any mesh objects
+        if len(objs_mesh) == 0:
+            bpy.ops.object.no_mesh_dialog('INVOKE_DEFAULT')
+            return {"CANCELLED"}
 
         # Enter edit mode
         obj_mode = obj_armature.mode # memo the current mode
