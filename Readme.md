@@ -1,10 +1,14 @@
 # What's this?
-A blender addon used for removing empty vertex groups and bones with no corresponding vertex groups.
+A blender extension used for removing empty vertex groups and bones with no corresponding vertex groups.
 
-# Install
-* Download from [github release](https://github.com/aoirusann/BlenderAddon_RemoveUnuseVertexGroupsAndBones/tags)
-* Then just install the `.zip` file in the same way as other blender addons
+# Install(Blender 4.2+)
+* Download zip file from [github release](https://github.com/aoirusann/BlenderAddon_RemoveUnuseVertexGroupsAndBones/tags)
+* Open Blender and drag zip file into it
+* Select a repository (e.g. User Default)
+* Toggle on `Enable Add-on` and click `OK`
 * NOTE: You need to enable `Setting - Interface - Display - Develop Extras` to use this plugin. (thanks for @minitiv)
+
+![](pic/2025-11-18-21-15-04.png)
 
 # Usage
 

@@ -1,0 +1,18 @@
+schema_version = "1.0.0"
+
+id = "aoiru_remove_unused_vertex_groups_and_bones"
+name = "[AOIRU] Remove unused Vertex Groups and Bones"
+version = "2.0.0"
+tagline = "Remove the unused vertex groups from mesh objects and remove the unused bones from armature objects"
+maintainer = "Aoirusann"
+type = "add-on"
+
+blender_version_min = "4.2.0"
+
+license = [
+  "SPDX:GPL-3.0-or-later"
+]
+
+tags = ["Modeling", "Mesh", "Rigging"]
+
+website = "https://github.com/aoirusann/BlenderAddon_RemoveUnuseVertexGroupsAndBones"

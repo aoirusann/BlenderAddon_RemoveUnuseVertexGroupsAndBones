@@ -1,15 +1,4 @@
-# Test on Blender 3.6.1
-
-bl_info = {
-	"name": "Remove unused Vertex Groups and Bones",
-	"author": "Aoirusann",
-	"version": (1, 0),
-	"blender": (3, 6, 1),
-	"location": "In search (Edit > Operator Search) type 'Remove Unused'",
-	"description": "Remove the unused vertex groups from mesh objects and remove the unused bones from armature objects.",
-	"doc_url": "https://github.com/aoirusann/BlenderAddon_RemoveUnuseVertexGroupsAndBones",
-	"category": "Model",
-}
+# Test on Blender 4.2.0
 
 import bpy
 import copy
