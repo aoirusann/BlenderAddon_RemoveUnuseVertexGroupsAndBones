@@ -133,14 +133,28 @@ class RemoveUnusedBones(bpy.types.Operator):
 
         return {'FINISHED'}
 
+def menu_func(self, context):
+    layout = self.layout
+    
+    # Add separator
+    layout.separator()
+    
+    # Add our custom operators
+    layout.operator("armature.remove_unused_vertexgroups", text="Remove Unused Vertex Groups")
+    layout.operator("armature.remove_unused_bones", text="Remove Unused Bones")
+
 def register():
     bpy.utils.register_class(RemoveUnusedBones)
     bpy.utils.register_class(RemoveUnusedVertexGroups)
+    bpy.utils.register_class(NoMeshDialog)
+    bpy.types.VIEW3D_MT_object_cleanup.append(menu_func)
 
 
 def unregister():
     bpy.utils.unregister_class(RemoveUnusedBones)
     bpy.utils.unregister_class(RemoveUnusedVertexGroups)
+    bpy.utils.unregister_class(NoMeshDialog)
+    bpy.types.VIEW3D_MT_object_cleanup.remove(menu_func)
 
 
 if __name__ == "__main__":
