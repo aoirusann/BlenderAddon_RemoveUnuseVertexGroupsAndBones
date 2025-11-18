@@ -3,7 +3,7 @@ schema_version = "1.0.0"
 id = "aoiru_remove_unused_vertex_groups_and_bones"
 name = "[AOIRU] Remove unused Vertex Groups and Bones"
 version = "2.0.0"
-tagline = "Remove the unused vertex groups from mesh objects and remove the unused bones from armature objects"
+tagline = "Remove the unused vertex groups and bones"
 maintainer = "Aoirusann"
 type = "add-on"
 
