@@ -1,3 +1,5 @@
+
+
 # What's this?
 A blender extension used for removing empty vertex groups and bones with no corresponding vertex groups.
 
@@ -19,7 +21,7 @@ A blender extension used for removing empty vertex groups and bones with no corr
 ![](./pic/RemoveUnusedVertexGroups.gif)
 
 ## Remove unused bones
-1. Select some mesh objects whose vertex groups will be checked.
+1. Select the mesh objects that reference the armature's bones.
 2. Ctrl+Click select an armature object whose bone will be removed. (Make sure the armature is the active object)
 3. Click `Object - Clean Up - Remove Unused Bones`
 4. The bones on the armature object which are not referred by any vertex group in mesh objects should have been removed.
